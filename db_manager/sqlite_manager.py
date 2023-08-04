@@ -193,10 +193,10 @@ class SqLiteManager:
         try:
             connect = sqlite3.connect(self.__path)
             cursor = connect.cursor()
-            cursor.execute(f"UPDATE {kind} SET viewpoint = ? WHERE __id_stakeholders = ?",
+            cursor.execute(f"UPDATE {kind} SET viewpoint = ? WHERE id_stakeholders = ?",
                            (log_registry.get_viewpoint(index), id_stakeholders))
             connect.commit()
-            return "\tСписок команд успешно изменен."
+            return "\tПозиция скорректирована."
         except sqlite3.Error as e:
             return f"\tОшибка при работе с базой данных: {e}"
 
