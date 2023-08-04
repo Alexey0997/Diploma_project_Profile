@@ -1,5 +1,4 @@
-"""Модуль реализует класс StakeholdersRegistry, предназначенный для учета лиц, влияюющих на разработку
-Стратегии развития энергетической области в Аурике."""
+"""Модуль реализует класс StakeholdersRegistry, предназначенный для учета стейкхолдеров."""
 from tabulate import tabulate
 from model.universities import Universities
 from model.research_i import ResearchInstitutes
