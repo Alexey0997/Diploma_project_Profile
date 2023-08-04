@@ -17,7 +17,7 @@ class Presenter:
         return self.data.read_db(self.log_registry)
 
     def get_table_registry(self):
-        """Метод вывода журнала регистрации животных."""
+        """Метод вывода журнала регистрации стейкхолдеров."""
         return self.log_registry.tabl_registry
 
     def size_registry(self):
@@ -25,15 +25,15 @@ class Presenter:
         return self.log_registry.number_of_stakeholders()
 
     def all_kind_leadership(self):
-        """Метод вывода данных о доступных видах домашних животных."""
+        """Метод вывода данных о доступных подклассах leadership."""
         return self.log_registry.list_kind_leadership()
 
     def all_kind_scientists(self):
-        """Метод вывода данных о доступных видах вьючных животных."""
+        """Метод вывода данных о доступных подклассах scientists."""
         return self.log_registry.list_kind_scientists()
 
     def add_stakeholder(self, kind, name, birth_date, position, viewpoint):
-        """Метод вывода данных о животном."""
+        """Метод вывода данных о стейкхолдере."""
         self.log_registry.add_stakeholder(kind, position, name, birth_date, viewpoint)
 
     def save_stakeholder(self, type_id, kind, name, birth_date, position, viewpoint):
@@ -41,17 +41,17 @@ class Presenter:
         return self.data.save_stakeholder(type_id, kind, position, name, birth_date, viewpoint)
 
     def find_stakeholder(self, index):
-        """Метод вывода данных о животном по индексу."""
+        """Метод вывода данных о стейкхолдере по индексу."""
         return self.log_registry.find_stakeholder(index)
 
     def get_viewpoint(self, index):
-        """Метод вывода данных о командах, освоенных животным."""
+        """Метод вывода данных о позиции стейкхолдера по строительству АЭС."""
         return self.log_registry.get_viewpoint(index)
 
     def add_viewpoint(self, index, viewpoint):
-        """Метод добавления новых команд."""
+        """Метод добавлении данных о корректировке или детализации позиции стейкхолдера."""
         self.log_registry.add_viewpoint(index, viewpoint)
 
     def save_viewpoint(self, index):
-        """Метод сохранения изменений в перечне команд, освоенных животным."""
+        """Метод сохранения изменений в позиции стейкхолдера."""
         return self.data.save_viewpoint(index, self.log_registry)
