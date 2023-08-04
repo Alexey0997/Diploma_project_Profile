@@ -1,0 +1,1 @@
+from model.stakeholders_registry import StakeholdersRegistry
